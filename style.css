@@ -344,13 +344,14 @@ body {
 /* スマホ向け */
 @media (max-width: 480px) {
   #backToTop {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     font-size: 12px;
     bottom: 15px;
     right: 15px;
   }
 }
+
 @media (max-width: 1024px) {
     .photo-gallery {
         max-width: 500px;
