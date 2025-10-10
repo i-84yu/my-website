@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div id="home" class="big-big">
+ <section class="hero">
+ <div class="hero-left"> 
+  <h1 id="hero-title">My IR</h1>
+ </div> 
+
+ <div class="hero-right">
+   <h2 id="name">Yui Ishibashi</h2>
+   <div class="hero-profile">
+    <img src="../myir/aicon.jpeg" alt="アイコン" id="aicon-poto">
+    <div style="position: relative; display: inline-block;">
+      <button id="about-btn">About Me</button>
+     <p id="msg" style="display: none;">\ Thank you for your interest./</p> 
+    </div>  
+   </div>
+   
+    <ul id="plofile1" style="display: none;">
+     <li>居住地：群馬県</li>
+     <li>職業：アパレル販売員</li>
+     <li>趣味：旅行、観劇、犬の散歩、アニメ</li>
+    </ul>  
+ </div>
+ </section>
+
+<section id="past" class="photo-section">
+ <div class="past-coment">
+    <div class="text">
+     <h3 class="timeline">ー　Past(過去)　ー</h3>
+     <p class="timeline1">
+          神奈川生まれの群馬育ち。<br>
+          中学受験、高校受験などのいわゆる「人生の岐路」と呼ばれるイベントはことごとく失敗しているが、<br>
+          そのおかげで"転んだ先で楽しむ"ことを学び、今の生きやすさに繋がっている。<br>
+          大学では服飾関係について学び、洋服や靴の修理に携わる会社に新卒入社。<br>
+          店舗で現場経験を積んだ後、大阪で20店舗の系列店舗のSV(スーパーバイザー)として従事。<br>
+          休みのない仕事ではあったが、日々の店舗巡回や新店舗の立上げなど、貴重な経験をさせてもらった。
+      </p>
+    </div>
+  
+   <div class="photo-gallery past-potos">
+      <button class="prev-btn">&#10094;</button>
+      <div class="slides">
+        <img src="../myir/IMG_0308.JPG" alt="幼少期" class="active poto1">
+        <img src="../myir/IMG_1282.JPG" alt="大学時代">
+        <img src="../myir/IMG_0715.JPG" alt="社会人" class="poto2">
+      </div>
+      <button class="next-btn">&#10095;</button>
+    </div>
+  </div>
+</section>
+
+<section id="present" class="photo-section">    
+  <div class="present-coment">
+    <div class="text">
+     <h3 class="timeline">ー　Present(現在)　ー</h3>
+     <p class="timeline2">コロナをきっかけに退職し、9年ぶりに地元へ帰郷。<br>
+      原点回帰として、大学時代にアルバイトをしていた大手アパレル会社に再入社し、アパレル販売員として勤務。<br>
+      全国で16店舗のみが行っている洋服リペアサービスの担当者として前職の経験を活かすことが出来ている。<br>
+      さらに、9月からは会社が現在力を入れている古着販売事業の売場担当も兼任。<br>
+      自店を含め、ロールモデルとして世界で3店舗しか開始していないサービスの為、試行錯誤しながら取り組んでいる。<br>
+      またプライベートでは、場所にとらわれない働き方を目指し、プログラミングの勉強を開始。</p>
+    </div>  
+    <div class="photo-gallery present-potos">
+      <button class="prev-btn">&#10094;</button>
+      <div class="slides">
+       <img src="../myir/IMG_9518.jpg" alt="売場" class="active poto3">
+       <img src="../myir/IMG_9517.jpg" alt="リペア" class="poto4">
+       <img src="../myir/スクリーンショット .png" alt="勉強" class="poto5">
+      </div>
+      <button class="next-btn">&#10095;</button>
+    </div>
+  </div>
+</section>
+
+<section id="future" class="photo-section">
+  <div class="future-coment">
+   <div class="text">
+    <h3 class="timeline">ー　Future(未来)　ー</h3>
+    <p class="timeline3">現在励んでいるプログラミングの勉強を続け、場所にとらわれない柔軟に働けるスキルを身につけたい。<br>
+      将来的には、大好きな関西に移住し、ポメラニアンを飼えるような心と時間に余裕のある暮らしを自力で実現したい。<br>
+      自分の選択に責任と誇りを持ち,周りの大切な人達をちゃんと大切にできる人であり続けたい。</p>
+   </div>   
+   <div class="photo-gallery future-potos">
+    <button class="prev-btn">&#10094;</button>
+    <div class="slides">
+      <img src="../myir/70527CE6-C90A-4284-8702-6A05D6B8E236.jpg" alt="西日本" class="active poto6">
+      <img src="../myir/7F9A82A4-112C-403B-937F-2D11030A08B1.JPG" alt="ポメラニアン" class="poto7">
+      <img src="../myir/IMG_6919.jpg" alt="コスモス" class="poto8">
+    </div>
+    <button class="next-btn">&#10095;</button>
+   </div>
+  </div>
+</section>
+
+<button id="backToTop">TOP</button>
+
+<script>
+  const aboutBtn = document.getElementById("about-btn");
+  const plofileList = document.getElementById("plofile1");
+  const msg = document.getElementById("msg");
+
+  aboutBtn.addEventListener("click", () => {
+    if (plofileList.style.display === "none") {
+      plofileList.style.display = "block";
+      msg.style.display = "block";
+    } else {
+      plofileList.style.display = "none";
+      msg.style.display = "none";
+    }
+  });
+
+  aboutBtn.addEventListener("mouseover", () => {
+    if (window.innerWidth <= 768) {
+     msg.style.display = "block";
+     return;
+    } 
+    msg.style.display = "block";
+  });
+
+  aboutBtn.addEventListener("mouseout", () => {
+    if (window.innerWidth <= 768) return;
+    if (plofileList.style.display === "none") {
+      msg.style.display = "none";
+    }
+  });
+  if (window.innerWidth <= 768) msg.style.display = "block";
+
+//写真スライド
+const galleries = document.querySelectorAll(".photo-gallery");
+
+galleries.forEach((gallery) => {
+  const slides = gallery.querySelectorAll(".slides img");
+  const prevBtn = gallery.querySelector(".prev-btn");
+  const nextBtn = gallery.querySelector(".next-btn");
+  let currentIndex = 0;
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.toggle("active", i === index);
+    });
+  }
+
+  prevBtn.addEventListener("click", () => {
+    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+    showSlide(currentIndex);
+  });
+
+  nextBtn.addEventListener("click", () => {
+    currentIndex = (currentIndex + 1) % slides.length;
+    showSlide(currentIndex);
+  });
+});
+// TOPボタン機能
+const backToTopBtn = document.getElementById("backToTop");
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 200) {
+    backToTopBtn.style.display = "block";
+  } else {
+    backToTopBtn.style.display = "none";
+  }
+});
+backToTopBtn.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+// スマホ向け：画像をタップで次のスライドに進む
+galleries.forEach((gallery) => {
+  const slides = gallery.querySelectorAll(".slides img");
+  let currentIndex = 0;
+
+  gallery.addEventListener("click", () => {
+    currentIndex = (currentIndex + 1) % slides.length;
+    slides.forEach((slide, i) => {
+      slide.classList.toggle("active", i === currentIndex);
+    });
+  });
+});
+</script>
+</div><!-- /#home -->
+</body>
+</html>
