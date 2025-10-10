@@ -247,8 +247,8 @@ body {
         gap: 60px 20px;
     }
     .hero-title {
-        font-size: 26px;
-        text-align: justify;
+        font-size: 3rem;
+        text-align: center;
         margin: 50px 0 30px 0;
     }
     .hero-right {
@@ -350,6 +350,10 @@ body {
     font-size: 10px;
     bottom: 15px;
     right: 15px;
+  }
+  .hero-title {
+    font-size: 3rem;
+    white-space: nowrap;
   }
 }
 
