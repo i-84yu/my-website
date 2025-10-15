@@ -6,7 +6,6 @@
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-<div id="home" class="big-big">
  <section class="hero">
  <div class="hero-left"> 
   <h1 id="hero-title">My IR</h1>
@@ -160,9 +159,9 @@ galleries.forEach((gallery) => {
   
   gallery.addEventListener("click", () => {
     currentIndex = (currentIndex + 1) % slides.length;
-    showSlide(currentIndex);
-    //slides.forEach((slide, i) => {
-      //slide.classList.toggle("active", i === currentIndex);
+    slides.forEach((slide, i) => {
+    slide.classList.toggle("active", i === currentIndex);
+   });
   });
 });
 
@@ -170,9 +169,6 @@ galleries.forEach((gallery) => {
 // galleries.forEach((gallery) => {
 //   const slides = gallery.querySelectorAll(".slides img");
 //   let currentIndex = 0;
-
-
-  
 
 
 // TOPボタン機能
@@ -189,6 +185,5 @@ backToTopBtn.addEventListener("click", () => {
 });
 
 </script>
-</div><!-- /#home -->
 </body>
 </html>
