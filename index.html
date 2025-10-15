@@ -16,7 +16,7 @@
    <h2 id="name">Yui Ishibashi</h2>
    <div class="hero-profile">
     <img src="aicon.jpeg" alt="アイコン" id="aicon-poto">
-    <div style="position: relative; display: inline-block;">
+    <div class="about-container">
       <button id="about-btn">About Me</button>
      <p id="msg" style="display: none;">\ Thank you for your interest./</p> 
     </div>  
@@ -156,8 +156,25 @@ galleries.forEach((gallery) => {
   nextBtn.addEventListener("click", () => {
     currentIndex = (currentIndex + 1) % slides.length;
     showSlide(currentIndex);
+  });  
+  
+  gallery.addEventListener("click", () => {
+    currentIndex = (currentIndex + 1) % slides.length;
+    showSlide(currentIndex);
+    //slides.forEach((slide, i) => {
+      //slide.classList.toggle("active", i === currentIndex);
   });
 });
+
+// スマホ向け：画像をタップで次のスライドに進む
+// galleries.forEach((gallery) => {
+//   const slides = gallery.querySelectorAll(".slides img");
+//   let currentIndex = 0;
+
+
+  
+
+
 // TOPボタン機能
 const backToTopBtn = document.getElementById("backToTop");
 window.addEventListener("scroll", () => {
@@ -170,18 +187,7 @@ window.addEventListener("scroll", () => {
 backToTopBtn.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
-// スマホ向け：画像をタップで次のスライドに進む
-galleries.forEach((gallery) => {
-  const slides = gallery.querySelectorAll(".slides img");
-  let currentIndex = 0;
 
-  gallery.addEventListener("click", () => {
-    currentIndex = (currentIndex + 1) % slides.length;
-    slides.forEach((slide, i) => {
-      slide.classList.toggle("active", i === currentIndex);
-    });
-  });
-});
 </script>
 </div><!-- /#home -->
 </body>
