@@ -87,6 +87,7 @@ body {
     color: #888;
     font-style: italic;
     position: absolute;
+    top: -2.0em;
     bottom: calc(100% + 8px);
     left: 50%;
     transform: translateX(-50%);
