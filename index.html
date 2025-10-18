@@ -102,6 +102,7 @@
 <button id="backToTop">TOP</button>
 
 <script>
+//プロフィール
   const aboutBtn = document.getElementById("about-btn");
   const plofileList = document.getElementById("plofile1");
   const msg = document.getElementById("msg");
@@ -156,7 +157,12 @@ galleries.forEach((gallery) => {
     currentIndex = (currentIndex + 1) % slides.length;
     showSlide(currentIndex);
   });  
-  
+});
+
+// スマホ向け：画像をタップで次のスライドに進む
+galleries.forEach((gallery) => {
+  const slides = gallery.querySelectorAll(".slides img");
+  let currentIndex = 0;
   gallery.addEventListener("click", () => {
     currentIndex = (currentIndex + 1) % slides.length;
     slides.forEach((slide, i) => {
@@ -164,12 +170,6 @@ galleries.forEach((gallery) => {
    });
   });
 });
-
-// スマホ向け：画像をタップで次のスライドに進む
-// galleries.forEach((gallery) => {
-//   const slides = gallery.querySelectorAll(".slides img");
-//   let currentIndex = 0;
-
 
 // TOPボタン機能
 const backToTopBtn = document.getElementById("backToTop");

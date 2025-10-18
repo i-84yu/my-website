@@ -77,6 +77,11 @@ body {
     color: #18103d;
 }
 
+.about-container {
+    position: relative;
+    display: inline-block;
+}
+
 #msg {
     font-size: 0.9rem;
     color: #888;
@@ -104,11 +109,6 @@ body {
     max-width: 300px;
     margin: 0 auto;
     overflow: hidden;
-}
-.photo-gallery img {
-    width: 300px;
-    height: 250px;
-    object-fit: cover;
 }
 
 
@@ -163,13 +163,6 @@ body {
     color: #18103d;
 }
 
-.photo-gallery .slides {
-    position: relative;
-    width: 100%;
-    height: 250px;
-    max-width: 300px;
-    overflow: hidden;
-}
 .photo-gallery .slides img {
     width: 100%;
     height: 100%;
@@ -297,17 +290,6 @@ body {
         margin: 0 auto;
     }
 
-    /*.photo-gallery .slides {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-    }*/
-
     .photo-gallery .prev-btn,
     .photo-gallery .next-btn {
         position: absolute;
@@ -328,19 +310,18 @@ body {
     }
     .photo-gallery .next-btn {
         right: 5%;
-    }
-}
-
-/* タブレット向け */
-@media (max-width: 768px) {
-  #backToTop {
+    }  #backToTop {
     width: 40px;
     height: 40px;
     font-size: 10px;
     bottom: 20px;
     right: 20px;
   }
+
+
 }
+
+
 
 /* スマホ向け */
 @media (max-width: 480px) {
@@ -380,7 +361,3 @@ body {
     }
     
 }
-
-        /*display: block !important;
-        visibility: visible !important;
-        opacity: 1 !important;
